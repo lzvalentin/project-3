@@ -1,0 +1,14 @@
+.logo {
+    font-size: 40px;
+    padding: 5px;
+    margin: 5px;
+}
+.navbarContainer {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: #00ffff;
+    position: sticky;
+    top: 0;
+}
