@@ -1,7 +1,8 @@
 import React from 'react';
+import {Link} from "react-router-dom"
 import "./nav.css";
 
-export default function nav() {
+export default function Nav() {
   return (
     <div className='navbarContainer'>
         <div className="navLeft">
