@@ -143,6 +143,12 @@ function App() {
   return (
     <>
   
+      <div>
+          <h1>Welcome Neighbor - Please login to see your feed </h1><hr></hr>
+
+      </div>
+  
+    
     {userId?(<h1>Welcome to your feed, {userData.email} !</h1> ):(<form onSubmit={login}>
       <br></br>
       <input name="email" value={formState.email} onChange={e=>setFormState({...formState,email:e.target.value})}/>
@@ -150,31 +156,11 @@ function App() {
       <button>Login</button><hr></hr>
     </form>
     
-    
     )}
-
-      {userId ? (
-        <div>
-          <br></br>
-          <button onClick={logout}>Logout</button><hr></hr>
-          <h2>See your comments below :</h2><hr></hr>
-           
-          {/*   UN-COMMENT  LINE 163  to get protected route comments for each user  */}
-          {userData.Comments.map(comment =><Comment key={comment.id} title={comment.title} body={comment.body} />)}
-
-
-          {/*   UN-COMMENT  LINE 167  to get ALL comments BUT no error  */}
-          {/* {comments.map(comment =><Comment key={comment.id} title={comment.title} body={comment.body} />)} */}
-
-
-
-        </div>
-      ) : (
-        <div>
-            <h1>Welcome Neighbor - Please login to see your feed </h1><hr></hr>
-            <h2>You can see ALL of our community's coments below: </h2><hr></hr>
-          {comments.map(comment => <Comment key={comment.id} User={comment.User} title={comment.title} body={comment.body} />)}
-        </div>
+    <button onClick={logout}>Logout</button><hr></hr>
+  
+        <Home/>
+        </>
       )}
 
    
@@ -184,7 +170,7 @@ function App() {
       From the Neighbors folks  
  */}
 
-    </>
-  )
-}
+
+  
+
 export default App;

@@ -1,10 +1,12 @@
 import "./sidebar.css";
 import React from 'react';
 
-export default function Sidebar() {
+
+export default function Sidebar(props) {
+ 
   return (
     <div className="sidebar">
-      <div>User</div>
+      <div>{props.user}</div>
       <div>Profile Picture</div>
       <ul>
         <li>
