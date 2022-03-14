@@ -7,8 +7,9 @@ import API from "./utils/API"
 import Nav from './components/Nav/Nav';
 // import Login from "./Pages/Login/login"
 
+import Comment from "./components/Comment";
 
-// my test
+
 const BASEURL="http://localhost:3000"
 
 
@@ -21,8 +22,10 @@ function App() {
   const [userData, setUserData] = useState({
     email:"",
     id:0,
-    Comments:[],
+    Comments:[]
   })
+
+
   const [formState, setFormState] = useState({
     email:'',
     password:''
@@ -46,9 +49,11 @@ function App() {
   }).then(res=>{
       return res.json()
   }).then(data=>{
-    // console.log(data);
+    console.log("line 54");
+    console.log(data);
+    console.log(typeof(data.Comments))
+    console.log((data.Comments))
     if(data.id){
-      console.log(data)
       setToken(savedToken);
       setUserId(data.id);
       setUserData({
@@ -56,6 +61,10 @@ function App() {
         email:data.email,
         Comments:data.Comments
       })
+      console.log("line 54");
+      // console.log(data)
+      console.log(typeof(userData.Comments))
+
     }
   })
   },[])
@@ -78,14 +87,21 @@ function App() {
         }
     }).then(res=>res.json()).then(data=>{
       console.log(data)
+      console.log(data.user.id)
+      console.log(data.user.Comments)
+
+
       setToken(data.token);
       localStorage.setItem("token",data.token);
       setUserId(data.user.id);
       setUserData({
         id:data.user.id,
         email:data.user.email,
-        Comments:data.user.Comments
+        Comments:[data.user.Comments]
       })
+      console.log(typeof(userData.Comments))
+      console.log(userData.Comments)
+      console.log(userData.email)
     })
   }
 
@@ -99,6 +115,7 @@ function App() {
       id:0,
       Comments:[],
     })
+    console.log(userData)
   }
 
 
@@ -107,7 +124,7 @@ function App() {
   //   e.preventDefault();
   //   fetch(`${BASEURL}/comments/`,{
   //     method:"POST",
-  //     body:JSON.stringify(blogFormState),
+  //     body:JSON.stringify(commentFormState),
   //     headers:{
   //         "Content-Type":"application/json",
   //         "authorization":`Bearer ${token}`
@@ -125,21 +142,48 @@ function App() {
 
   return (
     <>
+  
+    {userId?(<h1>Welcome to your feed, {userData.email} !</h1> ):(<form onSubmit={login}>
+      <br></br>
+      <input name="email" value={formState.email} onChange={e=>setFormState({...formState,email:e.target.value})}/>
+      <input name="password" value={formState.password} onChange={e=>setFormState({...formState,password:e.target.value})}/>
+      <button>Login</button><hr></hr>
+    </form>
+    
+    
+    )}
 
-{userId?(
-  <div>
+      {userId ? (
+        <div>
+          <br></br>
+          <button onClick={logout}>Logout</button><hr></hr>
+          <h2>See your comments below :</h2><hr></hr>
+           
+          {/*   UN-COMMENT  LINE 163  to get protected route comments for each user  */}
+          {userData.Comments.map(comment =><Comment key={comment.id} title={comment.title} body={comment.body} />)}
 
-    </div> 
-):(
-  <div>
 
-  </div> 
-)}
+          {/*   UN-COMMENT  LINE 167  to get ALL comments BUT no error  */}
+          {/* {comments.map(comment =><Comment key={comment.id} title={comment.title} body={comment.body} />)} */}
 
 
+
+        </div>
+      ) : (
+        <div>
+            <h1>Welcome Neighbor - Please login to see your feed </h1><hr></hr>
+            <h2>You can see ALL of our community's coments below: </h2><hr></hr>
+          {comments.map(comment => <Comment key={comment.id} User={comment.User} title={comment.title} body={comment.body} />)}
+        </div>
+      )}
+
+   
+{/* 
     <Login />
       <Home />
       From the Neighbors folks  
+ */}
+
     </>
   )
 }
