@@ -3,7 +3,10 @@ import { useState, useEffect } from "react";
 import React from 'react'
 import Comment from "../Comment";
 
-const BASEURL="http://localhost:3000"
+const BASEURL="https://neighbors-back.herokuapp.com/"
+
+// const BASEURL="http://localhost:3000"
+
 export default function Share() {
   const [comments, setComments] = useState([])
   const [userId, setUserId] = useState(0)
