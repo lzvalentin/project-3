@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import React from 'react'
 import Comment from "../Comment";
 
-const BASEURL="https://neighbors-back.herokuapp.com/"
+const BASEURL="https://neighbors-back.herokuapp.com"
 
 // const BASEURL="http://localhost:3000"
 

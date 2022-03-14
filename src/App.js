@@ -9,7 +9,7 @@ import Nav from './components/Nav/Nav';
 
 import Comment from "./components/Comment";
 
-const BASEURL="https://neighbors-back.herokuapp.com/"
+const BASEURL="https://neighbors-back.herokuapp.com"
 
 // const BASEURL="http://localhost:3000"
 
