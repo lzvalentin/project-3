@@ -6,12 +6,11 @@ import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 import API from "./utils/API"
 import Nav from './components/Nav/Nav';
 // import Login from "./Pages/Login/login"
-
 import Comment from "./components/Comment";
 
-const BASEURL="https://neighbors-back.herokuapp.com"
+// const BASEURL="https://neighbors-back.herokuapp.com/"
 
-// const BASEURL="http://localhost:3000"
+const BASEURL="http://localhost:3000"
 
 
 function App() {
