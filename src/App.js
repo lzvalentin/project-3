@@ -1,25 +1,8 @@
 import Home from "./Pages/home/home";
-<<<<<<< HEAD
-import Login from "./Pages/Login/login";
-import "bootstrap/dist/css/bootstrap.min.css";
-=======
 import "./App.css"
 import Login from '../src/Pages/Login/login.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css'
->>>>>>> dev
 import { useState, useEffect } from "react";
-<<<<<<< HEAD
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import API from "./utils/API";
-import Nav from "./components/Nav/Nav";
-import Bottom from "./components/Nav/Bottom";
-import  "./App.css";
-
-
-import Comment from "./components/Comment";
-
-const BASEURL = "https://neighbors-back.herokuapp.com";
-=======
 import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 import API from "./utils/API"
 import Nav from './components/Nav/Nav';
@@ -28,14 +11,10 @@ import Comment from "./components/Comment";
 // import 'dotenv/config'
 
 // const BASEURL="https://neighbors-back.herokuapp.com/"
->>>>>>> dev
 
 
-<<<<<<< HEAD
-=======
 
 const BASEURL =  process.env.REACT_APP_BASE_URL || "http://localhost:3000";
->>>>>>> dev
 function App() {
   const [comments, setComments] = useState([]);
   const [userId, setUserId] = useState(0);
@@ -60,37 +39,6 @@ function App() {
   useEffect(() => {
     fetchComments();
     const savedToken = localStorage.getItem("token");
-<<<<<<< HEAD
-    fetch(`${BASEURL}/users/profile`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${savedToken}`,
-      },
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log("line 54");
-        console.log(data);
-        console.log(typeof data.Comments);
-        console.log(data.Comments);
-        if (data.id) {
-          setToken(savedToken);
-          setUserId(data.id);
-          setUserData({
-            id: data.id,
-            email: data.email,
-            Comments: data.Comments,
-          });
-          console.log("line 54");
-          // console.log(data)
-          console.log(typeof userData.Comments);
-        }
-      });
-  }, []);
-=======
     fetch(`${BASEURL}/users/profile`,{
       method:"GET",
       headers:{
@@ -132,7 +80,6 @@ function App() {
     }).then(res=>res.json()).then(data=>{
       console.log(data.user.id)
       console.log(data.user.Comments)
->>>>>>> dev
 
   const fetchComments = () => {
     fetch(`${BASEURL}/comments/`)
