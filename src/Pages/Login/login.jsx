@@ -3,6 +3,7 @@ import {Form} from "react-bootstrap";
 import {Button} from "react-bootstrap";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import API from "../../utils/API"
+import "../Login/login.css";
 
 
 // const [loginInfo, setLoginInfo] = useState({

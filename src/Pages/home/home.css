@@ -1,4 +1,7 @@
 .homeContainer {
     display: flex;
     justify-content: space-between;
+    background-image: url("");
+    background-color: azure;
+    margin-left: 20px;
 }
