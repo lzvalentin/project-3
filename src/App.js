@@ -2,6 +2,7 @@ import Home from "./Pages/home/home";
 import Login from "./Pages/Login/login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import API from "./utils/API";
 import Nav from "./components/Nav/Nav";
@@ -12,8 +13,17 @@ import  "./App.css";
 import Comment from "./components/Comment";
 
 const BASEURL = "https://neighbors-back.herokuapp.com";
+=======
+import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
+import API from "./utils/API"
+import Nav from './components/Nav/Nav';
+// import Login from "./Pages/Login/login"
+import Comment from "./components/Comment";
 
-// const BASEURL="http://localhost:3000"
+// const BASEURL="https://neighbors-back.herokuapp.com/"
+>>>>>>> dev
+
+const BASEURL="http://localhost:3000"
 
 function App() {
   const [comments, setComments] = useState([]);
