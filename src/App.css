@@ -13,6 +13,7 @@ form {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -41,3 +42,35 @@ form {
 
 
 
+=======
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+div {
+  font-size: 20px;
+  background-color: antiquewhite;
+  margin: 5px 5px;
+  color: brown;
+}
+form {
+  display: inline-block;
+  float: right;
+}
+button {
+  border: 2px solid black;
+}
+.navBarcontainer, .navLeft, .logo{
+  background-color: transparent;
+}
+.postbox{
+  padding: 2px;
+}
+.formbox{
+  display: flex;
+}
+>>>>>>> dev
