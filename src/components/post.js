@@ -21,7 +21,6 @@ export default function Post () {
         
         }
 
-
         return (
             <div className='postbox'>
             <p>Post about something</p>
