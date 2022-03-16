@@ -20,9 +20,6 @@ export default function Post () {
             })
         
         }
-        handlePeriodChange(selVal) {
-            this.props.handlePeriodChange(selVal);
-        }
 
         return (
             <div className='postbox'>
