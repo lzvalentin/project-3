@@ -1,0 +1,8 @@
+.feed {
+    overflow-y: scroll;
+    height: calc(100vh - 50px);
+    width: 50%;
+    padding: 5px;
+    border: 1px solid black;
+    margin-top: 5px;
+}

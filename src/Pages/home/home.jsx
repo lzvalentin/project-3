@@ -10,10 +10,9 @@ export default function Home() {
   return (
     <>
       <Nav/>
-      <div className="homeContainer">
+      <div className="homeContainer row row-cols-md-3">
       <Sidebar/>
       <Feed/>
-      <Rightbar/>
       </div>
     </>
     );

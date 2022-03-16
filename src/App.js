@@ -1,19 +1,19 @@
 import Home from "./Pages/home/home";
+import "./App.css"
 import Login from '../src/Pages/Login/login.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState, useEffect } from "react";
 import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 import API from "./utils/API"
 import Nav from './components/Nav/Nav';
-// import Login from "./Pages/Login/login"
-
 import Comment from "./components/Comment";
+import Bottom from "./components/Nav/Bottom"
 
-const BASEURL="https://neighbors-back.herokuapp.com"
-
-// const BASEURL="http://localhost:3000"
+// const BASEURL="https://neighbors-back.herokuapp.com/"
 
 
+
+const BASEURL =  process.env.REACT_APP_BASE_URL || "http://localhost:3000";
 function App() {
 
   const [comments, setComments] = useState([])
@@ -23,7 +23,8 @@ function App() {
   const [userData, setUserData] = useState({
     email:"",
     id:0,
-    Comments:[]
+    Comments:[],
+    Posts:[]
   })
 
 
@@ -45,15 +46,11 @@ function App() {
       method:"GET",
       headers:{
           "Content-Type":"application/json",
-          "authorization":`Bearer ${savedToken}`
+          "authorization":`Bearer ${savedToken}`,
       }
   }).then(res=>{
       return res.json()
   }).then(data=>{
-    console.log("line 54");
-    console.log(data);
-    console.log(typeof(data.Comments))
-    console.log((data.Comments))
     if(data.id){
       setToken(savedToken);
       setUserId(data.id);
@@ -62,10 +59,6 @@ function App() {
         email:data.email,
         Comments:data.Comments
       })
-      console.log("line 54");
-      // console.log(data)
-      console.log(typeof(userData.Comments))
-
     }
   })
   },[])
@@ -80,14 +73,14 @@ function App() {
 
   const login = e=>{
     e.preventDefault();
+    console.log(BASEURL)
     fetch(`${BASEURL}/users/login`,{
         method:"POST",
-        body:JSON.stringify(formState),
+        body: JSON.stringify(formState),
         headers:{
             "Content-Type":"application/json"
         }
     }).then(res=>res.json()).then(data=>{
-      console.log(data)
       console.log(data.user.id)
       console.log(data.user.Comments)
 
@@ -104,6 +97,7 @@ function App() {
       console.log(userData.Comments)
       console.log(userData.email)
     })
+    
   }
 
 
@@ -114,9 +108,11 @@ function App() {
     setUserData({
       email:"",
       id:0,
-      Comments:[],
+      Comments:[''],
+      Posts:['']
     })
     console.log(userData)
+    
   }
 
 
@@ -158,9 +154,10 @@ function App() {
     </form>
     
     )}
-    <button onClick={logout}>Logout</button><hr></hr>
+    <button class="logout" onClick={logout}>Logout</button><hr></hr>
   
         <Home/>
+        <Bottom />
         </>
       )}
 
@@ -172,6 +169,6 @@ function App() {
  */}
 
 
-  
 
+ export {BASEURL};
 export default App;
