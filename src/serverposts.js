@@ -8,6 +8,7 @@ export default function Serverposts (props) {
             <h3>{props.title}</h3>
             <h5><p>{props.body}</p></h5>
             <h5><p>{props.userData}</p></h5>
+            <h5><p>{props.date}</p></h5>
             <hr/>
         </div>
     )

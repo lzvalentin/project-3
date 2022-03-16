@@ -40,7 +40,7 @@ export default function Sidebar() {
       setUserData({
         id:data.id,
         email:data.email,
-        Posts:data.Posts
+        Posts:data.Posts,
       })
       console.log(data.Posts)
       temp = data.Posts
@@ -69,11 +69,11 @@ export default function Sidebar() {
     <div className="sidebar">
 
 {/* {Posts.map(post =><Categories key={post.id} category={post.category}  />)} */}
-
-
-{temp.map(post =><Categories key={post.id} title={post.title} body={post.content} userData={userId}/>)}
-
-
+<div>
+<h1>Your posts:</h1>
+<div>{temp.map(post =><Categories key={post.id} title={post.title} body={post.content} userData={userId} date={post.createdAt}/>)}
+</div>
+</div>
 
       {/* <div>{props.user}</div>
       <div>Profile Picture</div>

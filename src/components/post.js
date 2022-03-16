@@ -26,16 +26,20 @@ export default function Post () {
             <p>Post about something</p>
             <form className='formbox' onSubmit={(e)=> handleSubmit(e)}>
               <label>Post Title</label>
+              <br></br>
               <input type="text" required value={title} onChange={(e)=> setTitle (e.target.value)}/>
+              <br></br>
               <label>Post Body</label>
+              <br></br>
               <textarea required value={content} onChange={(e) => setContent(e.target.value)}></textarea>
-              <select onChange={(val) => this.handlePeriodChange(val.target.value)} className="btn btn-sm btn-outline-secondary dropdown-toggle">
+              <br></br>
+              {/* <select onChange={(val) => this.handlePeriodChange(val.target.value)} className="btn btn-sm btn-outline-secondary dropdown-toggle">
                 <option value="TODAY">Today</option>
                 <option value="THIS_WEEK" >This Week</option>
                 <option value="THIS_MONTH">This Month</option>
                 <option value="THIS_YEAR">This Year</option>
                 <option selected value="LAST_AVAILABLE_DAY">Last Availabe NAV Day</option>
-              </select>
+              </select> */}
               <button>Add post</button>
             </form>
             </div>

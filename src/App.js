@@ -6,9 +6,8 @@ import { useState, useEffect } from "react";
 import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 import API from "./utils/API"
 import Nav from './components/Nav/Nav';
-// import Login from "./Pages/Login/login"
 import Comment from "./components/Comment";
-// import 'dotenv/config'
+import Bottom from "./components/Nav/Bottom"
 
 // const BASEURL="https://neighbors-back.herokuapp.com/"
 
@@ -98,6 +97,7 @@ function App() {
       console.log(userData.Comments)
       console.log(userData.email)
     })
+    
   }
 
 
@@ -108,10 +108,11 @@ function App() {
     setUserData({
       email:"",
       id:0,
-      Comments:[],
-      Posts:[]
+      Comments:[''],
+      Posts:['']
     })
     console.log(userData)
+    
   }
 
 
@@ -156,6 +157,7 @@ function App() {
     <button class="logout" onClick={logout}>Logout</button><hr></hr>
   
         <Home/>
+        <Bottom />
         </>
       )}
 
