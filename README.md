@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Neighbors
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It is a web application that encourages relationships between neighbors. This is an application that allows users in an area to interact with other people who also live in the same area. It provides an outlet to express personal and family needs such as bbq parties, pay HOA fee using stripe, lost dog, food drive or even just letting the neighborhood know you're having a pool party next week. You can even comment on the post and create posts that let the other neighbors know of the happenings in the neighborhood. In the hectic world of today what we really need is friendly neighborhood.
+# User Requirements, Input, Output
+Sign Up/Login To create a new account,
+click on the sign If login is successful, the user is
+up link and fill in the form details. To redirected to the home page
+login, fill in the details
+Add a New Post Click on the New Post tab on the navbar A new Post is created
+and fill out the form
+Create a New Profile Click on the Profile tab on the navbar A new Profile for the user is created
+then click on the Edit Profile button
+To view All Posts Navigate to the home page All posts will be displayed
+Log Out Click on the Account button and select You will be logged out
+log out
 
-## Available Scripts
 
-In the project directory, you can run:
+# Technology Used
 
-### `npm start`
+- Node.js
+- Express
+- React
+- React-Router
+- Material-UI
+- Passport
+- Bcrypt
+- Heroku
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Setup/Installation
 
-### `npm test`
+- Ensure you have sequlize installed.
+- Clone the Neighbors directory.
+- Install all the necessary dependencies necessary for running the application using this command npm install
+- Open the terminal and run this command npm install. You can then create a database.
+- Run the app using this command npm start run server on the terminal. You can then open the app on your browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Questions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any question reach us
+- Barnardo Dibildox bdibil@uw.edu
+- Keara Cotter kearacotter@gmail.com
+- Lorena Zuiniga
+- Karmjeet Nehal karmnamol@gmail.com
