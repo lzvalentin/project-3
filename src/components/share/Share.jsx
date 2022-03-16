@@ -60,7 +60,7 @@ export default function Share() {
   return(     
       <div>
         <br></br>         
-        {Posts.map(post =><Serverposts key={post.id} title={post.title} body={post.content} userData={userId}/>)}
+        {Posts.map(post =><Serverposts key={post.id} title={post.title} body={post.content} userData={userId} date={post.createdAt}/>)}
 
         {/*   UN-COMMENT  LINE 163  to get protected route comments for each user  */}
         {/* {userData.Comments.map(comment =><Comment key={comment.id} title={comment.title} body={comment.body} />)} */}
