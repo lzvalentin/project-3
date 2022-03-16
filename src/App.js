@@ -24,7 +24,8 @@ function App() {
   const [userData, setUserData] = useState({
     email:"",
     id:0,
-    Comments:[]
+    Comments:[],
+    Posts:[]
   })
 
 
@@ -108,6 +109,7 @@ function App() {
       email:"",
       id:0,
       Comments:[],
+      Posts:[]
     })
     console.log(userData)
   }
@@ -148,10 +150,10 @@ function App() {
       <input name="email" value={formState.email} onChange={e=>setFormState({...formState,email:e.target.value})}/>
       <input name="password" value={formState.password} onChange={e=>setFormState({...formState,password:e.target.value})}/>
       <button>Login</button><hr></hr>
-      <button className="logout" onClick={logout}>Logout</button><hr></hr>
     </form>
     
     )}
+    <button className="logout" onClick={logout}>Logout</button><hr></hr>
   
         <Home/>
         </>
