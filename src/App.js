@@ -153,7 +153,7 @@ function App() {
     </form>
     
     )}
-    <button className="logout" onClick={logout}>Logout</button><hr></hr>
+    <button class="logout" onClick={logout}>Logout</button><hr></hr>
   
         <Home/>
         </>

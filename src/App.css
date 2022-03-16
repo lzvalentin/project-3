@@ -42,10 +42,7 @@ div {
   margin: 5px 5px;
   color: brown;
 }
-form {
-  display: inline-block;
-  float: right;
-}
+
 button {
   border: 2px solid black;
 }
@@ -54,7 +51,4 @@ button {
 }
 .postbox{
   padding: 2px;
-}
-.formbox{
-  display: flex;
 }

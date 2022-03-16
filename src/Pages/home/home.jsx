@@ -13,7 +13,10 @@ export default function Home() {
       <div className="homeContainer">
       <Sidebar/>
       <Feed/>
+<<<<<<< Updated upstream
       {/* <Rightbar/> */}
+=======
+>>>>>>> Stashed changes
       </div>
     </>
     );
